@@ -85,13 +85,3 @@ npm install swagger-jsdoc swagger-ui-express
 import swaggerUI from “swagger-ui-express”;
 import swaggerJsDoc from “swagger-jsdoc”;
 ```
-
-# &#x1F34E; PS: If you have any other ideas about what can be improved please share your thoughts I would really appreciate that!
-
-<img align="right" src="public/Home.png" width="100%"/>&nbsp;
-&nbsp;
-
-<img align="right" src="public/api-docs.png" width="100%"/>&nbsp;
-&nbsp;
-
-## Nodejs server built and maintained by [Milan Sachani &#x1F49C;](https://milansachani.dev)
