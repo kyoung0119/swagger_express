@@ -14,14 +14,6 @@ const PORT = process.env.PORT || 8000
 
 const corsOptions = {
   origin: [
-    'https://tren.finance',
-    'https://www.tren.finance',
-    'https://testnet.tren.finance',
-    'https://www.testnet.tren.finance',
-    'https://tren-staging.vercel.app',
-    'https://www.tren-staging.vercel.app',
-    'https://app.tren.finance',
-    'https://www.app.tren.finance',
     'http://localhost:3000',
     'http://localhost:8000',
   ], // Allowed origins
@@ -30,7 +22,6 @@ const corsOptions = {
 }
 
 // CDN CSS
-
 const CSS_URL = 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.6.2/swagger-ui.min.css'
 let customCss = `
   .swagger-ui .opblock .opblock-summary-path { max-width: 100% !important} 
@@ -76,10 +67,10 @@ const swaggerOptions = {
         url: 'http://localhost:8000/',
         description: 'Local Deployment',
       },
-      {
-        url: 'https://be-express-lime.vercel.app/',
-        description: 'Vercel Deployment',
-      },
+      // {
+      //   url: 'https://be-express-lime.vercel.app/',
+      //   description: 'Vercel Deployment',
+      // },
     ]
   },
   // This is to call all the file
@@ -101,7 +92,7 @@ app.use((req, res, next) => {
   next()
 })
 
-db.connect()
+// db.connect()
 
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(specs, { customCssUrl: CSS_URL, customCss }))
 app.use('/', helloRouter)

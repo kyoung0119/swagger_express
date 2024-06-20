@@ -7,7 +7,6 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "start:python": "python telegram_bot/tren_bot.py",
     "build": "npm run clean && npm run compile",
     "compile": "babel src --out-dir dist",
     "clean": "rm -rf dist",
