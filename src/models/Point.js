@@ -1,4 +1,3 @@
-// models/SomeModel.ts
 import mongoose, { Schema } from 'mongoose'
 
 const PointSchema = new Schema({

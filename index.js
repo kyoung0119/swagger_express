@@ -41,20 +41,46 @@ const swaggerOptions = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'Tren Backend API',
-      version: '1.0.0',
-      description: '',
-    },
-    servers: [
-      {
-        url: 'https://be-express-lime.vercel.app/',
-        description: 'Vercel Deployment',
+      title: 'Swagger Scalia RPC',
+      description: 'This is the main Scalia RPC document. It contains all communications with Scalia nodes.\n\nThis version support general and SNS protocols only.',
+      version: '0.0.3',
+      termsOfService: 'https://t.me/',
+      contact: {
+        url: 'https://t.me/scaliadepin'
       },
+      license: {
+        name: 'Apache 2.0',
+        url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+      }
+    },
+    externalDocs: {
+      description: 'Find out more about Scalia',
+      url: 'https://scalia.gitbook.io/'
+    },
+    tags: [
+      {
+        name: 'general',
+        description: 'All not protocol-specific calls',
+      },
+      {
+        name: 'sns',
+        description: 'Scalia Naming System calls',
+      },
+      {
+        name: 'finance',
+        description: 'The finance operations',
+      },
+    ],
+    servers: [
       {
         url: 'http://localhost:8000/',
         description: 'Local Deployment',
       },
-    ],
+      {
+        url: 'https://be-express-lime.vercel.app/',
+        description: 'Vercel Deployment',
+      },
+    ]
   },
   // This is to call all the file
   apis: ['src/**/*.js'],
@@ -79,6 +105,6 @@ db.connect()
 
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(specs, { customCssUrl: CSS_URL, customCss }))
 app.use('/', helloRouter)
-app.use('/api', apiRouter)
+app.use('/', apiRouter)
 
 app.listen(PORT, () => console.log(`Server runs on port ${PORT}`))

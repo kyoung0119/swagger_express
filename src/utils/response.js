@@ -27,3 +27,9 @@ export const TOO_MANY_MSG = 'Too many request'
 // 5** code
 export const SERVER_ERROR_CODE = 500
 export const SERVER_ERROR_MSG = 'Internal Server Error.'
+
+export const NODE_NOT_AVAILABLE_CODE = 503
+export const NODE_NOT_AVAILABLE_MSG = 'Node is not available now'
+
+export const NODE_NOT_CONNECTED_CODE = 523
+export const NODE_NOT_CONNECTED_MSG = 'Node is not connected to the network'
