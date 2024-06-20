@@ -1,7 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
 import { getNodeInfo, getNodeList, getTransaction, getTransactionList } from "../controller/general.js";
-import { verifyToken } from '../middleware/authMiddleware.js'
 
 const generalRoute = express.Router()
 

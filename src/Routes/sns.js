@@ -1,6 +1,5 @@
 import express from "express";
 import bodyParser from "body-parser";
-
 import { addDomain, getDomain, getDomainList, getSNSInfo, updateDomain } from '../controller/sns.js'
 
 const snsRoute = express.Router()

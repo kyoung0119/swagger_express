@@ -1,9 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
 
-import { generateToken } from '../controller/auth.js'
-import { verifyToken } from '../middleware/authMiddleware.js'
-
 import generalRoute from "./general.js"
 import snsRoute from "./sns.js"
 import financeRoute from "./finance.js"

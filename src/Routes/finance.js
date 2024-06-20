@@ -1,6 +1,5 @@
 import express from "express";
 import bodyParser from "body-parser";
-
 import { getAddressFinaceInfo, getFinanceInfo, sendFunds } from "../controller/finance.js";
 
 const financeRoute = express.Router()

@@ -7,7 +7,6 @@ import swaggerJsDoc from 'swagger-jsdoc'
 import bodyParser from 'body-parser'
 import apiRouter from './src/Routes/index.js'
 import helloRouter from './src/hello.js'
-import db from './src/db/index.js'
 
 dotenv.config()
 const PORT = process.env.PORT || 8000
